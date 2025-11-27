@@ -73,13 +73,13 @@ export const RecentTransformation = () => {
                       svg
                       style={{ width: "1.5em", height: "1.5em" }}
                       title={item.countryCode}
-                      className="rotate-2 ml-2"
+                      className="rotate-2 ml-2 !hidden md:!flex"
                     />
                   </div>
                   <p className="text-gray-500 text-xs md:text-sm">{item.time}</p>
                 </div>
                 <p className="text-xs text-gray-600 md:text-sm">{item.goal}</p>
-                <div className="mt-1 sm:mt-4 flex gap-5">
+                <div className="mt-1 sm:mt-4 flex md:flex-row flex-col gap-2 md:gap-5">
                   <div className="text-sm shrink-0 items-center text-gray-600 mt-1 flex">
                     <Flame className="size-3" />
                     {item.streakNumber} days streak
