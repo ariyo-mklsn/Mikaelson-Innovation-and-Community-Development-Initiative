@@ -19,6 +19,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Eye, EyeOff } from "lucide-react";
 import Link from "next/link";
+import { Apple } from "@/components/icons/apple";
 
 // Zod schema
 const signInSchema = z.object({
@@ -40,7 +41,6 @@ export default function SignInForm() {
   });
 
   const isDisabled = form.formState.isValid;
-
 
   const onSubmit = (values: SignInFormValues) => {
     console.log("Sign In:", values);
@@ -122,21 +122,22 @@ export default function SignInForm() {
           variant="outline"
           className="flex-1 flex items-center justify-center gap-2 border-brand-green-100"
         >
-          <Google /> Google
+          <Google /> Sign in with Google
         </Button>
         <Button
           variant="outline"
           className="flex-1 flex items-center justify-center gap-2 border-brand-green-100"
         >
           <LinkedIn />
-          LinkedIn
+          Sign in with LinkedIn
         </Button>
-        {/* <Button
+
+        <Button
           variant="outline"
-          className="flex-1 flex items-center justify-center gap-2"
+          className="flex-1 flex items-center justify-center gap-2 border-brand-green-100"
         >
-          <X /> X
-        </Button> */}
+          <Apple /> Sign in with Apple ID
+        </Button>
       </div>
 
       {/* Optional "Create Account" link */}

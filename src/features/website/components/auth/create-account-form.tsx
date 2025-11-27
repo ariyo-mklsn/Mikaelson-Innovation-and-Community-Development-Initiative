@@ -5,6 +5,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 
+import { Apple } from "@/components/icons/apple";
 import { Google } from "@/components/icons/google";
 import { LinkedIn } from "@/components/icons/LinkedIn";
 import { Button } from "@/components/ui/button";
@@ -205,7 +206,9 @@ export default function CreateAccountForm() {
       {/* Divider */}
       <div className="flex items-center my-8">
         <hr className="flex-1 border-t border-gray-300" />
-        <span className="mx-2 text-black text-sm md:text-xl font-semibold">OR</span>
+        <span className="mx-2 text-black text-sm md:text-xl font-semibold">
+          OR
+        </span>
         <hr className="flex-1 border-t border-gray-300" />
       </div>
 
@@ -215,21 +218,21 @@ export default function CreateAccountForm() {
           variant="outline"
           className="flex-1 flex items-center justify-center gap-2 border-brand-green-100"
         >
-          <Google /> Google
+          <Google />
+          Continue with Google
         </Button>
         <Button
           variant="outline"
           className="flex-1 flex items-center justify-center gap-2 border-brand-green-100"
         >
-          <LinkedIn />
-          LinkedIn
+          <LinkedIn /> Continue with LinkedIn
         </Button>
-        {/* <Button
+        <Button
           variant="outline"
-          className="flex-1 flex items-center justify-center gap-2"
+          className="flex-1 flex items-center justify-center gap-2 border-brand-green-100"
         >
-          <XformerlyTwitter /> X
-        </Button> */}
+          <Apple /> Continue with Apple ID
+        </Button>
       </div>
       <div className="text-center mt-4 text-sm text-gray-600">
         Already have an account?{" "}
