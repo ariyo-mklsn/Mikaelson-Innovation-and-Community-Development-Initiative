@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
+import { ClerkProvider } from "@clerk/nextjs";
+import { QueriesObserver } from "@tanstack/react-query";
+import QueryProvider from "@/components/QueryProvider";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -74,18 +77,25 @@ export const metadata: Metadata = {
   category: "Technology & Community Development",
 };
 
+
+const clerkPubKey = "pk_test_ZGl2aW5lLWRvcnktMzMuY2xlcmsuYWNjb3VudHMuZGV2JA"
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${poppins.variable} antialiased bg-white text-gray-900`}
-      >
-        <main id="main-content">{children}</main>
-      </body>
-    </html>
+    <ClerkProvider publishableKey={clerkPubKey}>
+      <QueryProvider>
+        <html lang="en">
+          <body
+            className={`${poppins.variable} antialiased bg-white text-gray-900`}
+          >
+            <main id="main-content">{children}</main>
+          </body>
+        </html>
+      </QueryProvider>
+    </ClerkProvider>
   );
 }
