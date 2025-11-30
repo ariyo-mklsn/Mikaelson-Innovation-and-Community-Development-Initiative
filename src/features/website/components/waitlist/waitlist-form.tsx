@@ -52,11 +52,11 @@ export const WaitlistForm = ({ waitlistCount = 1247 }) => {
     try {
       const waitList = await axios.post(`${BACKEND_URL}/api/v1/waitList`, data);
       console.log(waitList);
-    } catch (error) {
-      console.log(error);
 if(waitlist) {
       alert("You have joined the waitList!")
 }
+    } catch (error) {
+      console.log(error);
     } finally {
       setLoading(false);
     }
