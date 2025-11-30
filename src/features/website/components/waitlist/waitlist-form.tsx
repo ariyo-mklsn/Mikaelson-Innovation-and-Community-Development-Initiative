@@ -54,7 +54,9 @@ export const WaitlistForm = ({ waitlistCount = 1247 }) => {
       console.log(waitList);
     } catch (error) {
       console.log(error);
+if(waitlist) {
       alert("You have joined the waitList!")
+}
     } finally {
       setLoading(false);
     }
