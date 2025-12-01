@@ -4,6 +4,7 @@ import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
 import { QueriesObserver } from "@tanstack/react-query";
 import QueryProvider from "@/components/QueryProvider";
+import { Toaster } from "@/components/ui/sonner";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -77,8 +78,7 @@ export const metadata: Metadata = {
   category: "Technology & Community Development",
 };
 
-
-const clerkPubKey = "pk_test_ZGl2aW5lLWRvcnktMzMuY2xlcmsuYWNjb3VudHMuZGV2JA"
+const clerkPubKey = "pk_test_ZGl2aW5lLWRvcnktMzMuY2xlcmsuYWNjb3VudHMuZGV2JA";
 
 export default function RootLayout({
   children,
@@ -92,6 +92,7 @@ export default function RootLayout({
           <body
             className={`${poppins.variable} antialiased bg-white text-gray-900`}
           >
+            <Toaster />
             <main id="main-content">{children}</main>
           </body>
         </html>
