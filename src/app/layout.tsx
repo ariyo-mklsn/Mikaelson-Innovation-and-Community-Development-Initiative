@@ -7,7 +7,6 @@ import { ThemeProvider } from "@/components/theme-provider";
 import QueryProvider from "@/components/QueryProvider";
 import { Toaster } from "sonner";
 import Script from "next/script";
-import { Toaster } from "sonner";
 
 const poppins = Poppins({
   variable: "--font-poppins",
