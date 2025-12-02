@@ -10,6 +10,7 @@ import {
 import { Menu } from "lucide-react";
 import Link from "next/link";
 import React from "react";
+import { ModeToggle } from "./mode-toggler";
 
 // Types
 interface NavLink {
@@ -34,10 +35,10 @@ export const MobileNav: React.FC<MobileNavProps> = ({
   actionButton,
 }) => {
   return (
-    <div className="lg:hidden">
+    <div className="lg:hidden flex items-center gap-2">
       <Sheet>
         <SheetTrigger asChild>
-          <Menu className="h-8 w-8" />
+          <Menu className="h-6 w-6 dark:text-white" />
         </SheetTrigger>
         <SheetContent side="right" className="w-64 sm:w-80">
           <SheetHeader>
@@ -68,6 +69,7 @@ export const MobileNav: React.FC<MobileNavProps> = ({
           </div>
         </SheetContent>
       </Sheet>
+      <ModeToggle />
     </div>
   );
 };

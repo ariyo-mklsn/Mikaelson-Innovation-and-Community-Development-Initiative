@@ -19,6 +19,9 @@
   --color-brand-secondary: var(--brand-secondary);
   --color-brand-primary-200: var(--brand-primary-200);
   --color-brand-primary-300: var(--brand-primary-300);
+  --color-brand-text-dark: var(--brand-text-dark);
+  --color-brand-text-dark-heading: var(--brand-text-dark-heading);
+  --color-brand-dark-bg-nav: var(--brand-dark-bg-nav);
 
   --font-mono: var(--font-geist-mono);
   --color-sidebar-ring: var(--sidebar-ring);
@@ -104,6 +107,9 @@
   --brand-primary-300: #eefcfc;
   --brand-bg-gray: #f8fafc;
   --brand-secondary: #adf0f2;
+  --brand-text-dark: #b1b1b1;
+  --brand-text-dark-heading: #e5e5e5;
+  --brand-dark-bg-nav: #0f0f0f;
 }
 
 html {

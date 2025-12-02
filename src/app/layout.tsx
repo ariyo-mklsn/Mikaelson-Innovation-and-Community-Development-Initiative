@@ -3,9 +3,11 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
 import { QueriesObserver } from "@tanstack/react-query";
+import { ThemeProvider } from "@/components/theme-provider";
 import QueryProvider from "@/components/QueryProvider";
 import { Toaster } from "sonner";
 import Script from "next/script";
+import { Toaster } from "sonner";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -118,7 +120,17 @@ export default function RootLayout({
                 style={{ display: "none", visibility: "hidden" }}
               />
             </noscript>
-            <main id="main-content">{children}</main>
+            <ThemeProvider
+              attribute="class"
+              defaultTheme="system"
+              enableSystem
+              disableTransitionOnChange
+            >
+              <main id="main-content">
+                {children}
+                <Toaster position="top-center" richColors />
+              </main>
+            </ThemeProvider>
           </body>
         </html>
       </QueryProvider>
