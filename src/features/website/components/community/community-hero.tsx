@@ -15,7 +15,7 @@ const CommunityHeroSection: React.FC = () => {
   };
 
   return (
-    <section className="relative w-full bg-white py-16">
+    <section className="relative w-full bg-white dark:bg-card py-16">
       <div className="container mx-auto flex flex-col items-center px-4 gap-8  md:gap-12">
         {/* Text Content */}
         <motion.div
@@ -25,13 +25,13 @@ const CommunityHeroSection: React.FC = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
         >
-          <h1 className="text-3xl md:text-5xl font-extrabold leading-tight">
+          <h1 className="text-3xl md:text-5xl font-extrabold leading-tight dark:text-brand-text-dark-heading">
             Transform Your Life Through
             <span className="block bg-gradient-to-r from-brand-blue to-teal-500 text-transparent bg-clip-text">
               Community & Growth
             </span>
           </h1>
-          <p className="text-base md:text-lg text-gray-600 max-w-xl">
+          <p className="text-base md:text-lg text-gray-600 max-w-xl dark:text-brand-text-dark">
             Connect with like-minded individuals across Africa, track your
             progress, and achieve your goals together. Experience the power of
             accountability and shared success.

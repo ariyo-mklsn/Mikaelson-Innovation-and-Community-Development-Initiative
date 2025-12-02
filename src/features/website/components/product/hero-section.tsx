@@ -5,13 +5,13 @@ export const ProductHero = () => {
   return (
     <section className="w-full py-20">
       <div className="container mx-auto text-center max-w-7xl">
-        <h1 className="text-4xl md:text-6xl lg:text-[80px] font-bold leading-tight">
+        <h1 className="text-4xl md:text-6xl lg:text-[80px] font-bold leading-tight dark:text-brand-text-dark-heading">
           The Productivity Companion
           <br />
           <span className="gradient-text">for Communities</span>
         </h1>
 
-        <p className="mt-4 text-lg lg:text-[20px] text-muted-foreground max-w-2xl mx-auto text-center">
+        <p className="mt-4 text-lg lg:text-[20px] dark:text-brand-text-dark text-muted-foreground max-w-2xl mx-auto text-center">
           RIO AI is a blazing fast productivity platform powering the next
           generation of community-driven applications.
         </p>

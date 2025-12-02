@@ -32,6 +32,7 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { BACKEND_URL } from "../../../../../constants";
 import { useState } from "react";
+import { toast } from "sonner";
 
 const formSchema = z.object({
   name: z.string().min(1, "Name is required"),
@@ -58,13 +59,18 @@ export const WaitlistForm = ({ waitlistCount = 1247 }) => {
   const email = form.watch("email");
   const name = form.watch("name");
 
+  const isValid = form.formState.isValid;
+
   const onSubmit = async (data: z.infer<typeof formSchema>) => {
     setLoading(true);
     try {
       const waitList = await axios.post(`${BACKEND_URL}/api/v1/waitList`, data);
       if (waitList) {
         // alert("You have joined the waitList!");
-        setShowSuccess(true)
+        console.log(waitList);
+        
+        toast.success("You have joined the waitList!");
+        // setShowSuccess(true);
       }
     } catch (error) {
       console.log(error);
@@ -190,14 +196,14 @@ export const WaitlistForm = ({ waitlistCount = 1247 }) => {
                 control={form.control}
                 name="newsletter"
                 render={({ field }) => (
-                  <FormItem className="gap-3 bg-[#f9fafb] py-4 rounded-lg flex-center flex">
+                  <FormItem className="gap-3 bg-[#f9fafb] dark:bg-card py-4 rounded-lg flex-center flex">
                     <FormControl>
                       <Checkbox
                         checked={field.value}
                         onCheckedChange={field.onChange}
                       />
                     </FormControl>
-                    <FormLabel>
+                    <FormLabel className="dark:text-brand-text-dark-heading">
                       I want to receive updates and exclusive content via email
                     </FormLabel>
                   </FormItem>
@@ -205,6 +211,7 @@ export const WaitlistForm = ({ waitlistCount = 1247 }) => {
               />
 
               <Button
+                disabled={!isValid || loading}
                 type="submit"
                 variant={"brand"}
                 className="w-full flex !py-7 items-center gap-2"

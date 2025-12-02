@@ -6,7 +6,7 @@ import React from "react";
 
 const WaitlistHome = () => {
   return (
-    <div className="bg-brand-secondary pb-30 px-5 md:px-0">
+    <div className="bg-brand-secondary dark:bg-brand-dark-bg-nav pb-30 px-5 md:px-0">
       <HeroSection />
       <WaitlistForm />
       <Benefits />

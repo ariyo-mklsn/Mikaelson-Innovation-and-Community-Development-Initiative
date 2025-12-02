@@ -5,12 +5,12 @@ import { Button } from "@/components/ui/button";
 
 export default function FinalCta() {
   return (
-    <section className="py-40 bg-[#e6f6fe] final-cta">
+    <section className="py-40 bg-[#e6f6fe] dark:bg-brand-dark-bg-nav final-cta">
       <div className="container mx-auto px-6 text-center">
-        <h2 className="text-3xl font-bold mb-4 lg:text-[48px]">
+        <h2 className="text-3xl font-bold mb-4 lg:text-[48px] dark:text-brand-text-dark-heading">
           Ready to Transform Your Community?
         </h2>
-        <p className="text-gray-700 mb-8 lg:text-xl">
+        <p className="text-gray-700 mb-8 lg:text-xl dark:text-brand-text-dark">
           Join thousands of organizations using RIO AI to drive meaningful
           change
         </p>

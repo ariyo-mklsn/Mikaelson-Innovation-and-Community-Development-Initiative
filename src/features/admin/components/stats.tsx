@@ -30,7 +30,7 @@ export const AdminDashboardStats = () => {
   ];
 
   return (
-    <div className="space-y-6 py-10">
+    <div className="space-y-6 py-10 px-5 md:px-0">
       {/* Page Title */}
       <div className="text-center">
         <h1 className="text-2xl font-bold">Dashboard</h1>
