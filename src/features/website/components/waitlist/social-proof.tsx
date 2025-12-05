@@ -12,7 +12,7 @@ export const SocialProof = ({ waitlistCount = 1247 }) => {
       <div className="flex flex-col md:flex-row items-center justify-evenly gap-10 w-full">
         {stats.map((item, index) => (
           <div key={index} className="text-center">
-            <div className="text-4xl md:text-[48px] font-bold">
+            <div className="text-4xl md:text-[48px] font-bold dark:text-black/70">
               {item.number}
             </div>
             <div className="text-gray-600 uppercase">{item.label}</div>
