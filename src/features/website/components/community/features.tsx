@@ -36,7 +36,7 @@ export const CommunityFeatures = () => {
               className="bg-white hover:-translate-y-2 duration-300 rounded-xl border shadow-lg px-5 py-10 flex flex-col items-center text-center gap-3 hover:shadow-lg transition-all"
             >
               <div className="size-16 text-white rounded-full flex-center btn-gradient">{feature.icon}</div>
-              <h3 className="font-semibold text-lg md:text-2xl">
+              <h3 className="font-semibold text-lg md:text-2xl dark:text-black/70">
                 {feature.title}
               </h3>
               <p className="text-gray-600 text-sm md:text-base">
