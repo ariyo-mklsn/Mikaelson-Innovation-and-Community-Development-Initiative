@@ -133,7 +133,7 @@ export const Footer = () => {
                           <Image
                             src={"/assets/images/instagram-icon.svg"}
                             width={30}
-                            height={20}
+                            height={30}
                             alt="instagram"
                           />
                         ) : (

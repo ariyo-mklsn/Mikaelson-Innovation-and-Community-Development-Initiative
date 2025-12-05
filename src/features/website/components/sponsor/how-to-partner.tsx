@@ -20,13 +20,8 @@ export const HowToPartner: React.FC = () => {
         <p className="text-gray-700 text-base md:text-lg dark:text-brand-text-dark">
           Contact us at{" "}
           <a
-<<<<<<< HEAD
-            href="mailto:community@mikaelsoninitiative.org"
-            className="text-indigo-600 underline font-medium"
-=======
             href="mailto:chukwusabastine2018@gmail.com"
             className="text-indigo-600 text-xs md:text-base underline font-medium"
->>>>>>> 8cca54fc40fb17b2a71096f533042e39ee984838
           >
             community@mikaelsoninitiative.org
           </a>
@@ -47,11 +42,7 @@ export const HowToPartner: React.FC = () => {
             <span className="text-indigo-600 font-bold text-xl">
               {String(index + 2).padStart(2, "0")}
             </span>
-<<<<<<< HEAD
-            <p className="text-gray-700 text-sm md:text-base lg:text-lg">{text}</p>
-=======
             <p className="text-gray-700 text-base md:text-lg dark:text-brand-text-dark">{text}</p>
->>>>>>> 8cca54fc40fb17b2a71096f533042e39ee984838
           </li>
         ))}
       </ol>

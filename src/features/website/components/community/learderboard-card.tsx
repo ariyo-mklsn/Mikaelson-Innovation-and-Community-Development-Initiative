@@ -35,9 +35,9 @@ export const LeaderboardCard = ({ user }: { user: LeaderboardUser }) => {
         {/* User Info */}
         <div className="w-full">
           <div className="flex justify-between md:flex-col">
-            <p className="font-semibold text-sm md:text-lg">{user.name}</p>
+            <p className="font-semibold text-sm md:text-lg dark:text-black">{user.name}</p>
             <div className="flex items-center gap-2">
-              <p className="text-xs md:text-sm text-gray-500">{user.country}</p>
+              <p className="text-xs md:text-sm text-gray-500 dark:text-brand-text-dark">{user.country}</p>
               <ReactCountryFlag
                 countryCode={user.shortLabel}
                 svg
@@ -55,16 +55,16 @@ export const LeaderboardCard = ({ user }: { user: LeaderboardUser }) => {
       <div className="flex flex-1 flex-col md:flex-row items-center justify-evenly gap-3">
         <div className="w-full grid grid-cols-3">
           <div>
-            <p className="font-bold">{user.points}</p>
-            <p className="text-xs text-gray-500">Points</p>
+            <p className="font-bold dark:text-black">{user.points}</p>
+            <p className="text-xs text-gray-500 dark:text-brand-text-dark">Points</p>
           </div>
           <div>
-            <p className="font-bold">{user.streak}</p>
-            <p className="text-xs text-gray-500">Streak</p>
+            <p className="font-bold dark:text-black">{user.streak}</p>
+            <p className="text-xs text-gray-500 dark:text-brand-text-dark">Streak</p>
           </div>
           <div>
-            <p className="font-bold">{user.habit}</p>
-            <p className="text-xs text-gray-500">Habits</p>
+            <p className="font-bold dark:text-black">{user.habit}</p>
+            <p className="text-xs text-gray-500 dark:text-brand-text-dark">Habits</p>
           </div>
         </div>
 

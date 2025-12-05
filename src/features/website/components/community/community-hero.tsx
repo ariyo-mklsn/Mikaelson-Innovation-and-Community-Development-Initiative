@@ -57,7 +57,7 @@ const CommunityHeroSection: React.FC = () => {
             >
               <Users className="w-8 h-8 text-purple-600" />
               <div>
-                <span className="block text-xl font-bold">
+                <span className="block text-xl font-bold dark:text-black">
                   {formatNumber(liveStats.activeMembers)}+
                 </span>
                 <span className="text-sm text-gray-500">Active Members</span>
@@ -73,7 +73,7 @@ const CommunityHeroSection: React.FC = () => {
             >
               <Flame className="w-8 h-8 text-orange-500" />
               <div>
-                <span className="block text-xl font-bold">
+                <span className="block text-xl font-bold dark:text-black">
                   {formatNumber(liveStats.totalStreaks)}+
                 </span>
                 <span className="text-sm text-gray-500">Daily Streaks</span>
@@ -89,7 +89,7 @@ const CommunityHeroSection: React.FC = () => {
             >
               <User className="w-8 h-8 text-green-600" />
               <div>
-                <span className="block text-xl font-bold">
+                <span className="block text-xl font-bold dark:text-black">
                   {liveStats.countriesReached}+
                 </span>
                 <span className="text-sm text-gray-500">Countries</span>
@@ -105,15 +105,6 @@ const CommunityHeroSection: React.FC = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.2 }}
           >
-<<<<<<< HEAD
-            <Link
-              href="/sign-up"
-              className="flex items-center gap-2 px-6 py-3 rounded-2xl btn-gradient text-white font-semibold shadow hover:opacity-90 transition"
-            >
-              <span>Start Your Journey</span>
-              <ArrowRight className="w-5 h-5" />
-            </Link>
-=======
             <motion.div className="flex items-center">
               <Link
                 href="/waitlist"
@@ -123,7 +114,6 @@ const CommunityHeroSection: React.FC = () => {
                 <ArrowRight className="w-5 h-5" />
               </Link>
             </motion.div>
->>>>>>> 8cca54fc40fb17b2a71096f533042e39ee984838
 
             {/* <Link
               href="/login"
