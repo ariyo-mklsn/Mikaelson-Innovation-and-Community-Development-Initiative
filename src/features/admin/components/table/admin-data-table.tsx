@@ -33,8 +33,8 @@ export function AdminDataTable({ data }: DataTableProps) {
   });
 
   async function fetchWaitList(): Promise<any[]> {
-    const response = await axios.get(`${BACKEND_URL}/api/v1/waitlist`);
-    console.log("waitlist:", response.data.data);
+    const response = await axios.get(`${BACKEND_URL}/api/v1/waitList`);
+    console.log("waitlists:", response.data.data);
     return response.data.data;
   }
   const {
@@ -42,7 +42,7 @@ export function AdminDataTable({ data }: DataTableProps) {
     error: challengesPostsError,
     isLoading: ChallengesPostsloading,
   } = useQuery({
-    queryKey: [`waitlist`],
+    queryKey: [`waitlists`],
     queryFn: fetchWaitList,
   });
 
