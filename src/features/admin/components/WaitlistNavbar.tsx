@@ -21,13 +21,13 @@ const WaitlistNavbar: React.FC<{ onExportAll?: () => void }> = ({ onExportAll })
       </div>
       <div className="flex items-center gap-2 sm:gap-4 flex-wrap justify-end">
         <button
-          className="bg-teal-500 items-center gap-2 px-3 py-2 rounded text-white text-sm hidden xs:flex"
+          className="bg-teal-500 items-center gap-2 px-3 py-2 rounded text-white text-sm hidden lg:flex"
           onClick={onExportAll}
         >
           <Download className="size-4" />
-          <span className="hidden xs:inline">Export All</span>
+          <span className="hidden lg:inline">Export All</span>
         </button>
-        <Link href="/admin/dashboard" className="bg-teal-500 items-center gap-2 px-3 py-2 rounded text-white text-sm hidden xs:flex">
+        <Link href="/admin/dashboard" className="bg-teal-500 items-center gap-2 px-3 py-2 rounded text-white text-sm hidden lg:flex">
           <Home className="size-4" />
           <span className="">Dashboard</span>
         </Link>

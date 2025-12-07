@@ -1,11 +1,9 @@
-"use client";
-
-import React from "react";
 import Link from "next/link";
 import { LogOut, ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import { ModeToggle } from "@/components/mode-toggler";
 
 export const AdminNavbar = () => {
   const router = useRouter();
@@ -31,7 +29,7 @@ export const AdminNavbar = () => {
           onClick={() => router.push("/admin")}
         >
           <LogOut size={16} />
-          Logout
+          <span className="hidden md:inline">Logout</span>
         </Button>
 
         {/* Back to Website */}
@@ -40,8 +38,9 @@ export const AdminNavbar = () => {
           className="text-sm text-white bg-brand-green-100 flex items-center gap-1 rounded-md py-3 px-3"
         >
           <ArrowLeft size={16} />
-          Back to Site
+          <span className="hidden md:inline">Back to Site</span>
         </Link>
+        <ModeToggle />
       </div>
     </header>
   );
