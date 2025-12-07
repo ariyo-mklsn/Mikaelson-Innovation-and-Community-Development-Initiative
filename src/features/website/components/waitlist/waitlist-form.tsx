@@ -32,7 +32,6 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { BACKEND_URL } from "../../../../../constants";
 import { useState } from "react";
-import { toast } from "sonner";
 
 const formSchema = z.object({
   name: z.string().min(1, "Name is required"),
@@ -45,6 +44,7 @@ const formSchema = z.object({
 export const WaitlistForm = ({ waitlistCount = 1247 }) => {
   const [loading, setLoading] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("")
   const form = useForm({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -70,7 +70,8 @@ export const WaitlistForm = ({ waitlistCount = 1247 }) => {
         setShowSuccess(true);
       }
     } catch (error) {
-      console.log(error);
+      console.log(error?.message);
+      setErrorMessage(error?.message)
     } finally {
       setLoading(false);
     }
@@ -223,9 +224,12 @@ export const WaitlistForm = ({ waitlistCount = 1247 }) => {
               <CheckCircle2Icon className=" text-green-500 mb-4 h-10 w-10" />
               <h3 className="text-2xl font-bold mb-2">Welcome aboard! 🎉</h3>
               <p>
-                Thanks {name}! We'll send you updates at {email}{" "}
+                Welcome {name}! We'll send you updates at {email}{" "}
               </p>
             </div>
+          )}
+          {errorMessage && (
+            <div className="text-white p-4 bg-red-400 text-center">{errorMessage}</div>
           )}
         </CardContent>
       </Card>
