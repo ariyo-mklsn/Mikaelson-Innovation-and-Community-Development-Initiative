@@ -28,11 +28,10 @@ import {
   User,
   Users,
 } from "lucide-react";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { BACKEND_URL } from "../../../../../constants";
-import { useState } from "react";
-import { toast } from "sonner";
 
 const formSchema = z.object({
   name: z.string().min(1, "Name is required"),
@@ -83,7 +82,8 @@ export const WaitlistForm = ({ waitlistCount = 1247 }) => {
           <div className="text-center mb-6">
             <h2 className="text-3xl font-bold">Reserve Your Spot</h2>
             <p className="text-gray-600">
-              Join {waitlistCount} others already on the list
+              Join <strong>{waitlistCount}</strong> others
+              already on the list
             </p>
           </div>
 
@@ -221,8 +221,10 @@ export const WaitlistForm = ({ waitlistCount = 1247 }) => {
           {showSuccess && (
             <div className="bg-gradient-to-br from-[#ccf9e2] to-[#b2f5d6] rounded-2xl mt-5 text-center py-12 flex-center flex-col">
               <CheckCircle2Icon className=" text-green-500 mb-4 h-10 w-10" />
-              <h3 className="text-2xl font-bold mb-2">Welcome aboard! 🎉</h3>
-              <p>
+              <h3 className="text-2xl font-bold mb-2 dark:text-black">
+                Welcome aboard! 🎉
+              </h3>
+              <p className="dark:text-black">
                 Thanks {name}! We'll send you updates at {email}{" "}
               </p>
             </div>
