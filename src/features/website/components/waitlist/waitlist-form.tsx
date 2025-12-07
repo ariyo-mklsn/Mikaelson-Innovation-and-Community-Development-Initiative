@@ -84,7 +84,7 @@ import { BACKEND_URL } from "../../../../../constants";
             <div className="text-center mb-6">
               <h2 className="text-3xl font-bold">Reserve Your Spot</h2>
               <p className="text-gray-600">
-                Join {waitlistCount} others already on the list
+                Join <b>{waitlistCount}</b> others already on the list
               </p>
             </div>
 
