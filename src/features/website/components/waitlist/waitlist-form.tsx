@@ -28,10 +28,10 @@ import {
   User,
   Users,
 } from "lucide-react";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { BACKEND_URL } from "../../../../../constants";
-import { useState } from "react";
 
   const formSchema = z.object({
     name: z.string().min(1, "Name is required"),
@@ -77,16 +77,16 @@ import { useState } from "react";
       }
     };
 
-  return (
-    <section className="w-full py-12 flex justify-center">
-      <Card className="w-full max-w-xl shadow-md rounded-2xl">
-        <CardContent className="p-8">
-          <div className="text-center mb-6">
-            <h2 className="text-3xl font-bold">Reserve Your Spot</h2>
-            <p className="text-gray-600">
-              Join {waitlistCount} others already on the list
-            </p>
-          </div>
+    return (
+      <section className="w-full py-12 flex justify-center">
+        <Card className="w-full max-w-xl shadow-md rounded-2xl">
+          <CardContent className="p-8">
+            <div className="text-center mb-6">
+              <h2 className="text-3xl font-bold">Reserve Your Spot</h2>
+              <p className="text-gray-600">
+                Join {waitlistCount} others already on the list
+              </p>
+            </div>
 
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
