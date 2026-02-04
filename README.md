@@ -10,7 +10,7 @@
 
 **Empowering communities across Africa through technology, education, and collaboration.**
 
-[Live Demo](#) • [Report Bug](https://github.com/your-org/mikaelson-initiative/issues) • [Request Feature](https://github.com/your-org/mikaelson-initiative/issues)
+[Live Demo](#) • [Report Bug](https://github.com/Mikaelson-1/Mikaelson-Innovation-and-Community-Development-Initiative/issues) • [Request Feature](https://github.com/Mikaelson-1/Mikaelson-Innovation-and-Community-Development-Initiative/issues)
 
 </div>
 
@@ -156,7 +156,7 @@ git --version
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/Mikaelson1/Mikaelson-Innovation-and-Community-Development-Initiative.git
+   git clone https://github.com/Mikaelson-1/Mikaelson-Innovation-and-Community-Development-Initiative.git
    cd Mikaelson-Innovation-and-Community-Development-Initiative
    ```
 
@@ -209,7 +209,7 @@ npm run start
 ## 📁 Project Structure
 
 ```
-mikaelson-initiative/
+Mikaelson-Innovation-and-Community-Development-Initiative/
 ├── public/                     # Static assets
 │   ├── assets/                 # Images and media files
 │   │   └── images/            # Image assets
@@ -324,7 +324,7 @@ We welcome contributions from the community! Here's how you can help:
 
 2. **Clone your fork**
    ```bash
-   git clone https://github.com/your-username/Mikaelson-Innovation-and-Community-Development-Initiative.git
+   git clone https://github.com/Mikaelson-1/Mikaelson-Innovation-and-Community-Development-Initiative.git
    cd mikaelson-initiative
    ```
 
@@ -532,13 +532,13 @@ This project is **private** and proprietary. All rights reserved.
 **Mikaelson Initiative Team**
 
 - Website: [Coming Soon]
-- Email: [contact@mikaelson-initiative.org]
-- Twitter: [@MikaelsonInit]
+- Email: [hello@mikaelsoninitiative.org]
+- Twitter: [@MikaelsonInitiveOrg]
 
 ---
 
-<div align="center">
+<center>
 
 **Built with ❤️ for Africa by the Mikaelson Initiative Team**
 
-</div>
+</center>
