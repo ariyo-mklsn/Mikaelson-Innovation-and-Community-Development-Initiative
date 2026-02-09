@@ -533,7 +533,7 @@ This project is **private** and proprietary. All rights reserved.
 
 - Website: [https://mikaelsoninitiative.org]
 - Email: [hello@mikaelsoninitiative.org]
-- Twitter: [@MikaelsonInitiveOrg]
+- Twitter: [@mcdti_org]
 
 ---
 
