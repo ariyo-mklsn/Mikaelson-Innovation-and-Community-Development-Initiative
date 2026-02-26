@@ -42,7 +42,7 @@ const FeaturesOverview: React.FC = () => {
           </h2>
           <p className="mt-4 text-center w-full text-gray-600 dark:text-brand-text-dark text-lg max-w-md mx-auto">
             Powerful tools and supportive community to accelerate your personal
-            growth
+            growth.
           </p>
         </div>
 

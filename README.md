@@ -237,7 +237,7 @@ Mikaelson-Innovation-and-Community-Development-Initiative/
 │   │   │   ├── waitlist/      # Waitlist page
 │   │   │   ├── layout.tsx     # Website layout
 │   │   │   └── page.tsx       # Homepage
-│   │   ├── admin/             # Admin panel routes
+│   │   ├── admin/             # Admin protected routes
 │   │   ├── api/               # API routes
 │   │   ├── dashboard/         # User dashboard
 │   │   ├── sso-callback/      # SSO authentication callback
@@ -533,7 +533,7 @@ This project is **private** and proprietary. All rights reserved.
 
 - Website: [https://mikaelsoninitiative.org]
 - Email: [hello@mikaelsoninitiative.org]
-- Twitter: [@MikaelsonInitiveOrg]
+- Twitter: [@mcdti_org]
 
 ---
 
