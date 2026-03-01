@@ -73,30 +73,24 @@ import HeroSlider, { HeroSlide } from "../components/hero-slider"
 const heroSlides: HeroSlide[] = [
    {
       image: '/assets/images/mikealson-hero.png',
-      title: `We're Building Africa's Future - One Student, One Idea, One Action at a Time.`,
-      subtitle: `The Mikaelson Initiative is a youth-driven movement using technology, intentional living, and community to transform Africa from the inside out. We're starting with students. We're staying with purpose.`,
+      title: `Youth Leadership & Personal Development Programs for African Students`,
+      subtitle: `The Mikaelson Initiative is a youth development organization equipping African students with practical leadership skills, personal growth systems, and structured accountability.`,
       ctaText1: "Join The Community",
       ctaText2: "Explore Our Ecosystem",
     },
    {
       image: '/assets/images/mikaelson-landing.png',
       title: '',
-      ctaText1: "Join The Community",
-      ctaText2: "Explore Our Ecosystem",
+      ctaText1: "",
+      ctaText2: "",
     },
    {
       image: '/assets/images/mikaelson-landing-ii.png',
       title: '',
-      ctaText1: "Join The Community",
-      ctaText2: "Explore Our Ecosystem",
+      ctaText1: "",
+      ctaText2: "",
       
-    },
-    // {
-    //   image: '/assets/images/landing-hero.png',
-    //   title: 'Adventure Awaits',
-     
-    // },
-    
+    },   
 ];
 
 

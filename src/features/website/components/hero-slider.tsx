@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import React, { useState, useEffect, useRef } from 'react';
-import gsap from 'gsap';
-import Image from 'next/image';
+import React, { useState, useEffect, useRef } from "react";
+import gsap from "gsap";
+import Image from "next/image";
 
 export interface HeroSlide {
   image: string;
@@ -25,9 +25,9 @@ interface HeroSliderProps {
 const HeroSlider: React.FC<HeroSliderProps> = ({
   slides,
   autoPlayInterval = 7000,
-  height = 'h-screen',
+  height = "h-screen",
   overlayOpacity = 0.5,
-  className = '',
+  className = "",
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const titleRef = useRef<HTMLHeadingElement>(null);
@@ -40,31 +40,31 @@ const HeroSlider: React.FC<HeroSliderProps> = ({
   useEffect(() => {
     if (slides.length === 0 || hasAnimatedIn.current) return;
     hasAnimatedIn.current = true;
-const tl = gsap.timeline();
-tl.fromTo(
-  overlayRef.current,
-  { opacity: 0 },
-  { opacity: 1, duration: 0.6, ease: 'power2.inOut' }
-)
-.fromTo(
-  titleRef.current,
-  { y: 50, opacity: 0 },
-  { y: 0, opacity: 1, duration: 0.8, ease: 'power3.out' },
-  '-=0.3'
-)
-.fromTo(
-  subtitleRef.current,
-  { y: 30, opacity: 0 },
-  { y: 0, opacity: 1, duration: 0.8, ease: 'power3.out' },
-  '-=0.6'
-)
-.fromTo(
-  ctaTextRef.current,
-  { y: 30, opacity: 0 },
-  { y: 0, opacity: 1, duration: 0.8, ease: 'power3.out' },
-  '-=0.6'
-);
-}, [slides.length]);
+    const tl = gsap.timeline();
+    tl.fromTo(
+      overlayRef.current,
+      { opacity: 0 },
+      { opacity: 1, duration: 0.6, ease: "power2.inOut" },
+    )
+      .fromTo(
+        titleRef.current,
+        { y: 50, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.8, ease: "power3.out" },
+        "-=0.3",
+      )
+      .fromTo(
+        subtitleRef.current,
+        { y: 30, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.8, ease: "power3.out" },
+        "-=0.6",
+      )
+      .fromTo(
+        ctaTextRef.current,
+        { y: 30, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.8, ease: "power3.out" },
+        "-=0.6",
+      );
+  }, [slides.length]);
 
   // Auto-rotate background images only
   useEffect(() => {
@@ -79,7 +79,9 @@ tl.fromTo(
 
   if (slides.length === 0) {
     return (
-      <div className={`relative w-full ${height} flex items-center justify-center bg-gray-900`}>
+      <div
+        className={`relative w-full ${height} flex items-center justify-center bg-gray-900`}
+      >
         <p className="text-white text-xl">No slides available</p>
       </div>
     );
@@ -89,7 +91,9 @@ tl.fromTo(
   const { title, subtitle, ctaText1, ctaText2 } = slides[0];
 
   return (
-    <div className={`relative w-full max-w-full rounded-br-4xl rounded-bl-4xl ${height} overflow-hidden ${className}`}>
+    <div
+      className={`relative w-full max-w-full rounded-br-4xl rounded-bl-4xl ${height} overflow-hidden ${className}`}
+    >
       {/* Background Images — only these cycle */}
       {slides.map((slide, index) => (
         <div
@@ -99,7 +103,7 @@ tl.fromTo(
             opacity: currentIndex === index ? 1 : 0,
           }}
         >
-          {slide.image.startsWith('http') ? (
+          {slide.image.startsWith("http") ? (
             <Image
               src={slide.image}
               alt={slide.alt || slide.title}
@@ -132,7 +136,7 @@ tl.fromTo(
       >
         <h1
           ref={titleRef}
-          className="text-3xl md:text-[2.1rem] border border-red-300  font-bold text-white mb-6 max-w-3xl text-left leading-[1.2]"
+          className="text-3xl md:text-[2.1rem]  font-bold text-white mb-6 max-w-3xl text-left leading-[1.2]"
         >
           {title}
         </h1>
@@ -144,27 +148,21 @@ tl.fromTo(
         </p>
 
         {/* cta */}
-        <div className='flex gap-3 '>
+        <div className="flex gap-3 ">
           {/* 1 */}
-        <button className='text-left rounded-md'  ref={ctaTextRef}>
-
-          <span className='text-[15px] py-2 px-4 font-semi-bold  border  border-red-400 text-white '>
-            {ctaText1}
-
-          </span>
-        </button>
-        {/* 2 */}
-        <button className='text-left rounded-md'  ref={ctaTextRef}>
-
-          <span className='text-[15px] py-2 px-4 font-semi-bold  border  border-red-400 text-white '>
+          <button className="text-left rounded-md px-4 py-2 text-sm font-semibold hover:text-cyan-300/50  text-white bg-transparent transition-colors duration-300 hover:bg-white text-cyan-300/50 border-2 hover:border-cyan-300/50 focus:outline-none focus:ring-2  focus:ring-cyan-300/60" ref={ctaTextRef}>
+           
+              {ctaText1}
+           
+          </button>
+          {/* 2  bg-[rgba(92,225,230,0.5)]*/}
+          <button
+            ref={ctaTextRef}
+            className="text-left rounded-md px-4 py-2 text-sm font-semibold  text-white  transition-colors duration-300 bg-cyan-300/50 focus:outline-none focus:ring-2 focus:ring-cyan-300/60"
+          >
             {ctaText2}
-
-          </span>
-        </button>
+          </button>
         </div>
-
-        
-        
       </div>
     </div>
   );
