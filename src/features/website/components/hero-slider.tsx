@@ -148,17 +148,17 @@ const HeroSlider: React.FC<HeroSliderProps> = ({
         </p>
 
         {/* cta */}
-        <div className="flex gap-3 ">
+        <div className="flex gap-2 ">
           {/* 1 */}
-          <button className="text-left rounded-md px-4 py-2 text-sm font-semibold hover:text-cyan-300/50  text-white bg-transparent transition-colors duration-300 hover:bg-white text-cyan-300/50 border-2 hover:border-cyan-300/50 focus:outline-none focus:ring-2  focus:ring-cyan-300/60" ref={ctaTextRef}>
+          <button className="text-left rounded-md md:px-4 md:py-2 px-2 py-1 text-sm font-semibold bg-transparent hover:border-cyan-300/50  text-white  transition-colors duration-300 text-cyan-300/50 border-2 hover:border-cyan-300/50 focus:outline-none focus:ring-2  focus:ring-cyan-300/60" ref={ctaTextRef}>
            
               {ctaText1}
            
           </button>
-          {/* 2  bg-[rgba(92,225,230,0.5)]*/}
+          {/* 2 */}
           <button
             ref={ctaTextRef}
-            className="text-left rounded-md px-4 py-2 text-sm font-semibold  text-white  transition-colors duration-300 bg-cyan-300/50 focus:outline-none focus:ring-2 focus:ring-cyan-300/60"
+            className="text-left rounded-md md:px-4 md:py-2 px-2 py-1 text-sm font-semibold  text-white  transition-colors duration-300 bg-cyan-300/50 focus:outline-none focus:ring-2 focus:ring-cyan-300/60"
           >
             {ctaText2}
           </button>
