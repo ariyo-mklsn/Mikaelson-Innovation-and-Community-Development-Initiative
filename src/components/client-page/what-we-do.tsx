@@ -36,7 +36,7 @@ export default function WhatWeDo() {
       <div className="container mx-auto md:px-10 ">
 
         <div className="text-center mb-20">
-          <h2 className="md:text-[2.3rem] text-xl  dark:text-white font-extrabold leading-[1.2] tracking-[-0.025em] text-[#111111]d mb-6">
+          <h2 className="md:text-[2.3rem] text-xl   dark:text-white font-extrabold leading-[1.2] tracking-[-0.025em] text-[#111111] mb-6">
             How We Develop Future-Ready African Leaders
           </h2>
           <p className="md:max-w-2xl mx-auto w-full md:text-lg text-sm ">
@@ -44,12 +44,12 @@ export default function WhatWeDo() {
           </p>
         </div>
 
-        <div className="pillars grid md:grid-cols-4 gap-6">
+        <div className="pillars grid md:grid-cols-4 gap-8">
 
           {pillars.map((pillar, index) => (
             <div
               key={index}
-              className="pillar-card group border rounded-2xl overflow-hidden bg-transparent transition-shadow duration-300"
+              className="pillar-card group border border-zinc-400 dark:border-zinc-500 rounded-2xl overflow-hidden bg-transparent transition-shadow duration-300"
             >
               {/* Image Wrapper */}
               <div className="relative h-64 overflow-hidden">
@@ -62,11 +62,11 @@ export default function WhatWeDo() {
               </div>
 
               {/* Content */}
-              <div className="p-4 dark:text-white ">
-                <h3 className="text-xl font-medium mb-4">
+              <div className="p-5 dark:text-white flex flex-col justify-between space-y-4">
+                <h3 className="md:text-lg text-md font-semibold">
                   {pillar.title}
                 </h3>
-                <p>
+                <p className="text-[16px] text-[#111111] dark:text-white">
                   {pillar.description}
                 </p>
               </div>

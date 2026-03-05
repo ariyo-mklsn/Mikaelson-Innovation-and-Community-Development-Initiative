@@ -41,7 +41,7 @@ export default function IntroVideo() {
             growth system.
           </p>
           <p className="text-lg md:text-[1.1rem] dark:text-white leading-[1.2] tracking-[0.025em] text-[#111111]">
-            This short video shares the story, the conviction, and the long-term
+            This short video highlights our problem statement, the story, the conviction, and the long-term
             vision behind our youth leadership and personal development programs
             across Nigeria and Africa.
           </p>
