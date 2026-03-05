@@ -32,7 +32,7 @@ export default function WhatWeDo() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-10 text-[#111111] dark:text-white border border-red-300">
+    <section ref={sectionRef} className="py-10 text-[#111111] dark:text-white">
       <div className="container mx-auto md:px-10 ">
 
         <div className="text-center mb-20">
@@ -52,7 +52,7 @@ export default function WhatWeDo() {
               className="pillar-card group border border-zinc-400 dark:border-zinc-500 rounded-2xl overflow-hidden bg-transparent transition-shadow duration-300"
             >
               {/* Image Wrapper */}
-              <div className="relative h-64 overflow-hidden">
+              <div className="relative h-64 overflow-hidden border-b border-zinc-400 dark:border-zinc-500">
                 <Image
                   src={pillar.image}
                   alt={pillar.title}
@@ -63,7 +63,7 @@ export default function WhatWeDo() {
 
               {/* Content */}
               <div className="p-5 dark:text-white flex flex-col justify-between space-y-4">
-                <h3 className="md:text-lg text-md font-semibold">
+                <h3 className="md:text-lg text-[17px] font-semibold">
                   {pillar.title}
                 </h3>
                 <p className="text-[16px] text-[#111111] dark:text-white">
