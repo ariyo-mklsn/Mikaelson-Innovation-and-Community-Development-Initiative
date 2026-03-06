@@ -64,7 +64,7 @@ export default function HowItWorks() {
       </div>
 
      
-      <div className="md:hidden flex flex-col gap-4 px-4 pb-20">
+      <div className="md:hidden flex flex-col gap-4 pb-20">
         {steps.map((step, index) => (
           <div
             key={index}
@@ -131,10 +131,10 @@ export default function HowItWorks() {
         ))}
       </div>
 
-    
+        {/* desktop */}
       <section
         ref={sectionRef}
-        className="relative hidden md:flex items-center justify-center overflow-hidden"
+        className="relative hidden md:flex items-center  justify-center overflow-hidden"
         style={{ height: "100dvh" }}
       >
         <div
@@ -154,6 +154,7 @@ export default function HowItWorks() {
                 bg-[#050a0a]
                 text-white
                 overflow-hidden
+                
               "
             >
               {/* subtle glow*/}

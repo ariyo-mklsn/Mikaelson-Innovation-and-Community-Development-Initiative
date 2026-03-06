@@ -5,8 +5,8 @@ import { pillars } from "./data";
 
 export default function WhatWeDo() {
   return (
-    <section className="py-24 text-[#111111] dark:text-white">
-      <div className="container mx-auto px-5 md:px-10">
+    <section className="py-24 text-[#111111]  dark:text-white">
+      <div className="container mx-auto  md:px-10">
 
         {/* header*/}
         <div className="text-center mb-16 max-w-2xl mx-auto">

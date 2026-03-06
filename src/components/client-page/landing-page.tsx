@@ -3,13 +3,14 @@
 import AnimatedSection from "@/components/animated-section";
 import EcosystemSection from "@/features/website/components/ecosystem-section";
 import { ExploreMore } from "@/features/website/components/explore-more";
-import HomeHero from "@/features/website/components/hero";
+import HomeHero from "@/components/client-page/hero";
 import ImpactSection from "@/features/website/components/impact-section";
 import MediaStories from "@/features/website/components/media-stories";
 import { useIsMobile } from "@/hooks/use-mobile";
-import IntroVideo from "@/features/website/components/intro-video";
+import IntroVideo from "@/components/client-page/intro-video";
 import WhatWeDo from "./what-we-do";
-import HowItWorks from "@/features/website/components/how-it-works";
+import HowItWorks from "@/components/client-page/how-it-works";
+import WhoItsFor from "./audience";
 
 export default function Home() {
   const isMobile = useIsMobile();
@@ -32,6 +33,8 @@ export default function Home() {
         <IntroVideo />
         <WhatWeDo />
         <HowItWorks />
+        <WhoItsFor />
+
         <EcosystemSection />
         <AnimatedSection
           title="The Mikaelson Community"

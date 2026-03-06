@@ -1,4 +1,4 @@
-import HeroSlider, { HeroSlide } from "../components/hero-slider"
+import HeroSlider, { HeroSlide } from "./hero-slider";
 
 // we need more photos actually ..... 
 const heroSlides: HeroSlide[] = [
@@ -15,6 +15,18 @@ const heroSlides: HeroSlide[] = [
       ctaText1: "",
       ctaText2: "",
     },
+   {
+      image: '/assets/images/hero-img-ii.png',
+      title: '',
+      ctaText1: "",
+      ctaText2: "",
+    },
+  //  {
+  //     image: '/assets/images/hero-image-i.png',
+  //     title: '',
+  //     ctaText1: "",
+  //     ctaText2: "",
+  //   },
    {
       image: '/assets/images/mikaelson-landing-ii.png',
       title: '',
