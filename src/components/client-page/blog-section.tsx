@@ -27,32 +27,6 @@ function formatDate(dateStr: string) {
   });
 }
 
-const FALLBACK_POSTS: Post[] = [
-  {
-    _id: "1",
-    title: "Why Leadership Begins With Discipline",
-    slug: { current: "#" },
-    category: "Leadership",
-    excerpt: "True leadership is built on small daily habits. Discipline shapes the mindset required to influence others and create meaningful impact.",
-    publishedAt: new Date().toISOString(),
-  },
-  {
-    _id: "2",
-    title: "The Power of Student Communities",
-    slug: { current: "#" },
-    category: "Community",
-    excerpt: "When students surround themselves with people who challenge them to grow, their potential expands far beyond the classroom.",
-    publishedAt: new Date().toISOString(),
-  },
-  {
-    _id: "3",
-    title: "Ideas That Can Transform a School",
-    slug: { current: "#" },
-    category: "Innovation",
-    excerpt: "Change often begins with simple ideas. Here are ways students can create positive impact within their own schools.",
-    publishedAt: new Date().toISOString(),
-  },
-];
 
 function FeatureCard({ post }: { post: Post }) {
   return (
@@ -163,8 +137,7 @@ function EmptyState() {
 
 export default function BlogSection({ posts }: BlogSectionProps) {
   const hasPosts = posts.length > 0;
-  const displayPosts = hasPosts ? posts : FALLBACK_POSTS;
-  const [feature, ...rest] = displayPosts;
+  const [feature, ...rest] = posts;
 
   return (
     <section className="py-24 px-5 md:px-10">
@@ -186,31 +159,26 @@ export default function BlogSection({ posts }: BlogSectionProps) {
           </div>
         </div>
 
-        {!hasPosts && (
-          <div className="mb-4">
-            <EmptyState />
-            <p className="text-xs text-center text-[#bbb] dark:text-white/20 mt-5 mb-10">
-              Sample preview — publish your first article in the Studio to replace this
-            </p>
+        {!hasPosts ? (
+          <EmptyState />
+        ) : (
+          <div
+            className="grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-px rounded-2xl overflow-hidden border border-[#5CE1E6]/12"
+            style={{ background: "rgba(92,225,230,0.08)" }}
+          >
+            <div className="bg-white dark:bg-[#0f0f0f] p-8 md:p-10">
+              <FeatureCard post={feature} />
+            </div>
+            <div className="bg-white dark:bg-[#0f0f0f] p-8 md:p-10 border-t lg:border-t-0 lg:border-l border-[#5CE1E6]/12">
+              <p className="text-xs font-semibold tracking-[0.15em] uppercase text-[#bbb] dark:text-white/25 mb-2">
+                More articles
+              </p>
+              {rest.map((post) => (
+                <SecondaryCard key={post._id} post={post} />
+              ))}
+            </div>
           </div>
         )}
-
-        <div
-          className={`grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-px rounded-2xl overflow-hidden border border-[#5CE1E6]/12 ${!hasPosts ? "opacity-40 pointer-events-none select-none" : ""}`}
-          style={{ background: "rgba(92,225,230,0.08)" }}
-        >
-          <div className="bg-white dark:bg-[#0f0f0f] p-8 md:p-10">
-            <FeatureCard post={feature} />
-          </div>
-          <div className="bg-white dark:bg-[#0f0f0f] p-8 md:p-10 border-t lg:border-t-0 lg:border-l border-[#5CE1E6]/12">
-            <p className="text-xs font-semibold tracking-[0.15em] uppercase text-[#bbb] dark:text-white/25 mb-2">
-              More articles
-            </p>
-            {rest.map((post) => (
-              <SecondaryCard key={post._id} post={post} />
-            ))}
-          </div>
-        </div>
 
         <div className="flex flex-col items-center gap-3 mt-12">
           <Link

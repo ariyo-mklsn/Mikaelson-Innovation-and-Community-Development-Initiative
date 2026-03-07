@@ -31,6 +31,7 @@ const Header: React.FC<HeaderProps> = ({
     { label: "Our Product", href: "/product" },
     { label: "About Us", href: "/about-us" },
     { label: "Volunteer", href: "/volunteer" },
+    { label: "Our Blog", href: "/blog" },
   ],
   mobileNavLinks = [
     { label: "The Team", href: "/team" },
@@ -38,6 +39,7 @@ const Header: React.FC<HeaderProps> = ({
     { label: "Our Product", href: "/product" },
     { label: "About Us", href: "/about-us" },
     { label: "Volunteer", href: "/volunteer" },
+    { label: "Our Blog", href: "/blog" },
   ],
   actionButton = { label: "Sponsor a program", href: "/sponsor" },
 }) => {
