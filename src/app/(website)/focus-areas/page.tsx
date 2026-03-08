@@ -51,7 +51,7 @@ const FocusAreasPage = () => {
         </div>
       </section>
 
-      <section className="mx-auto w-full max-w-6xl px-6 py-14 md:px-8 lg:px-10">
+      <section className="mx-auto w-full  px-5 py-14 md:px-10 ">
         <div className="grid gap-6 md:grid-cols-2">
           {focusAreaOrder.map((slug) => {
             const area = focusAreaContent[slug];
