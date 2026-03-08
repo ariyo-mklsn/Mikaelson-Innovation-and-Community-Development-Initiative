@@ -37,7 +37,7 @@ const FocusAreasPage = () => {
   return (
     <main className="dark:bg-brand-dark-bg-nav">
       <section className="border-b border-slate-200 bg-gradient-to-br from-cyan-50 via-sky-50 to-white">
-        <div className="mx-auto w-full max-w-6xl px-6 py-16 md:px-8 md:py-20 lg:px-10">
+        <div className="  mx-auto w-full  py-16 px-5 md:px-10 md:py-20 ">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-cyan-700">
             Strategic Priorities
           </p>
@@ -51,7 +51,7 @@ const FocusAreasPage = () => {
         </div>
       </section>
 
-      <section className="mx-auto w-full max-w-6xl px-6 py-14 md:px-8 lg:px-10">
+      <section className="mx-auto w-full  px-5 py-14 md:px-10 ">
         <div className="grid gap-6 md:grid-cols-2">
           {focusAreaOrder.map((slug) => {
             const area = focusAreaContent[slug];
