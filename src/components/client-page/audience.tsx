@@ -5,7 +5,7 @@ import { audience } from "./data";
 
 export default function WhoItsFor() {
   return (
-    <section className="py-24 px-5 md:px-10 bg-white dark:bg-[#050a0a] text-[#111] dark:text-white overflow-hidden transition-colors duration-300">
+    <section className="py-24  md:px-10 bg-white dark:bg-[#050a0a] text-[#111] dark:text-white overflow-hidden transition-colors duration-300">
       <div className="max-w-7xl mx-auto">
 
         {/* header */}

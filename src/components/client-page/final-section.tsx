@@ -60,7 +60,7 @@ export default function FinalCTA() {
                 href="/community"
                 className="group inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-[#5CE1E6] text-black font-semibold text-sm hover:bg-[#4bcdd2] transition-all duration-200 w-full sm:w-auto justify-center"
               >
-                Apply to Join the Community
+                Join the Community
                 <ArrowRight size={15} className="group-hover:translate-x-0.5 transition-transform duration-200" />
               </Link>
 

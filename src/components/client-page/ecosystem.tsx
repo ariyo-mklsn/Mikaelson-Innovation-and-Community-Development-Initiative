@@ -62,28 +62,31 @@ function EcosystemBlock({ eco }: { eco: (typeof ecosystems)[0] }) {
         >
           {eco.label}
         </span>
-        <h2 className="text-[clamp(1.6rem,4vw,2.4rem)] font-extrabold dark:text-white text-[#111] leading-[1.15] tracking-[-0.025em] max-w-2xl mx-auto">
+        <h2 className="text-[clamp(1.6rem,4vw,2.4rem)] font-extrabold dark:text-white text-[#111] leading-[1.15] tracking-[-0.025em] max-w-2xl mx-auto px-5">
           {eco.title}
         </h2>
-        <p className="text-gray-500 mt-3 text-sm max-w-md mx-auto">
+        <p className="text-gray-500 dark:text-gray-400 mt-3 text-sm max-w-md mx-auto px-5">
           {eco.subtitle}
         </p>
       </div>
 
       {/* mobile cards */}
-      <div className="md:hidden flex flex-col gap-4  pb-16">
+      <div className="md:hidden flex flex-col gap-3 pb-10">
         {eco.bullets.map((bullet, i) => (
-          <div
+          <motion.div
             key={i}
-            className="relative rounded-2xl border border-[#5CE1E6]/60 bg-[#050a0a] text-white overflow-hidden p-6 flex flex-col justify-end"
-            style={{ minHeight: "260px" }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-40px" }}
+            transition={{ duration: 0.45, delay: i * 0.08, ease: "easeOut" }}
+            className="relative rounded-2xl border border-[#5CE1E6]/30 bg-[#050a0a] text-white overflow-hidden"
           >
             {/* glow */}
             <div
               className="absolute top-0 left-0 w-[55%] h-[65%] pointer-events-none"
               style={{
                 background:
-                  "radial-gradient(ellipse at 20% 20%, rgba(92,225,230,0.07) 0%, transparent 70%)",
+                  "radial-gradient(ellipse at 20% 20%, rgba(92,225,230,0.08) 0%, transparent 70%)",
               }}
             />
             {/* grid texture */}
@@ -95,34 +98,55 @@ function EcosystemBlock({ eco }: { eco: (typeof ecosystems)[0] }) {
                 backgroundSize: "40px 40px",
               }}
             />
-            {/* big number */}
-            <div
-              className="absolute text-[#5CE1E6]/10 top-2 left-3 font-black leading-none pointer-events-none select-none"
-              style={{
-                fontSize: "clamp(80px, 26vw, 110px)",
-                letterSpacing: "-0.05em",
-              }}
-            >
-              {String(i + 1).padStart(2, "0")}
+
+            <div className="relative z-10 p-6">
+              {/* top row: step label + number */}
+              <div className="flex items-center justify-between mb-5">
+                <span className="text-[#5CE1E6] text-[10px] font-bold tracking-[0.2em] uppercase">
+                  {eco.label} · {String(i + 1).padStart(2, "0")}
+                </span>
+                <span
+                  className="font-black text-[#5CE1E6]/10 leading-none select-none pointer-events-none"
+                  style={{ fontSize: "52px", letterSpacing: "-0.05em" }}
+                >
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+              </div>
+
+              {/* bullet text */}
+              <p className="text-white/80 text-[15px] leading-relaxed font-medium">
+                {bullet}
+              </p>
+
+              {/* tags */}
+              <div className="flex flex-wrap gap-2 mt-5">
+                {eco.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="px-3 py-1 rounded-full text-[11px] font-medium border border-[#5CE1E6]/30 text-[#5CE1E6] bg-[#5CE1E6]/5"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
             </div>
-            <div className="relative z-10">
-              <p className="text-white/70 text-sm leading-relaxed">{bullet}</p>
-            </div>
+
+            {/* bottom accent */}
             <div
-              className="absolute bottom-0 left-0 right-0 h-[2px]"
+              className="h-[1.5px] w-full"
               style={{
                 background:
                   "linear-gradient(90deg, transparent, #5CE1E6 40%, #5CE1E6 60%, transparent)",
-                opacity: 0.4,
+                opacity: 0.3,
               }}
             />
-          </div>
+          </motion.div>
         ))}
 
-        {/*mobile ctas */}
-        <div className="pt-4 flex justify-center">
+        {/* mobile CTA */}
+        <div className="pt-5 flex justify-center">
           <Link href={eco.cta.href}>
-            <button className="px-7 py-3 text-sm font-semibold text-white bg-[#0097a7] rounded-full hover:bg-[#00838f] transition-all duration-300 shadow-[0_4px_20px_rgba(0,151,167,0.3)]">
+            <button className="px-7 py-3 text-sm font-semibold text-black bg-[#5CE1E6] rounded-full transition-all duration-300 shadow-[0_4px_20px_rgba(92,225,230,0.25)]">
               {eco.cta.label}
             </button>
           </Link>
@@ -209,7 +233,7 @@ function EcosystemBlock({ eco }: { eco: (typeof ecosystems)[0] }) {
       {/* desktop CTA */}
       <div className="hidden md:flex justify-center items-center gap-4 py-16 px-6">
         <Link href={eco.cta.href}>
-          <button className="px-8 py-3.5 text-sm font-semibold text-black rounded-full border border-[#5CE1E6] bg-[#5CE1E6] ">
+          <button className="px-8 py-3.5 text-sm font-semibold text-black rounded-full border border-[#5CE1E6] bg-[#5CE1E6]">
             {eco.cta.label}
           </button>
         </Link>
@@ -239,32 +263,32 @@ export default function EcosystemSection() {
 
   return (
     <div className="w-full">
-      <div className="text-center pt-24 pb-4">
+      <div className="text-center pt-24 pb-4 px-5">
         <p className="text-[#5CE1E6] text-sm font-semibold tracking-[0.2em] uppercase mb-4">
           Ecosystem
         </p>
         <h2 className="text-[clamp(2rem,5vw,2.6rem)] dark:text-white font-extrabold leading-[1.2] tracking-[-0.025em] text-[#111111] max-w-2xl mx-auto">
           Everything you need to grow, lead, and connect
         </h2>
-        <p className="text-gray-500 mt-4 text-base max-w-xl mx-auto">
+        <p className="text-gray-500 dark:text-gray-400 mt-4 text-base max-w-xl mx-auto">
           The Mikaelson ecosystem is built around four pillars — each one
           designed to move you forward.
         </p>
       </div>
-      {/* bg-[#5CE1E6] text-black hover:bg-[#4bcdd2] transition-all duration-200 */}
+
       {/* pills */}
-      <div className="flex justify-center flex-wrap gap-3  py-8">
+      <div className="flex justify-center flex-wrap gap-3 py-4 ">
         {ecosystems.map((eco, i) => (
           <button
             key={eco.id}
             onClick={() => setActive(i)}
             className={`px-5 py-2 rounded-full text-sm font-semibold transition-all duration-300 border ${
               active === i
-                ? "bg-[#5CE1E6] text-black  transition-all duration-200"
-                : "text-black  hover:border-[#5CE1E6] "
+                ? "bg-[#5CE1E6] text-black border-[#5CE1E6]"
+                : "text-[#111] dark:text-white border-black/15 dark:border-white/15 hover:border-[#5CE1E6] hover:text-[#0097a7] dark:hover:text-[#5CE1E6]"
             }`}
           >
-            <span className=" mr-1.5">{eco.number}</span>
+            <span className="opacity-50 mr-1.5">{eco.number}</span>
             {eco.label}
           </button>
         ))}

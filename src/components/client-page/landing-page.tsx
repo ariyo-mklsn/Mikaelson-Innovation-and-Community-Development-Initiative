@@ -22,7 +22,7 @@ export default function Home() {
         <EcosystemSection />
         <WhoItsFor />
         <ImpactSection />
-        <CommunitySection />
+        {/* <CommunitySection /> */}
         <BlogSectionWrapper />
         <FinalSection />
       </main>
