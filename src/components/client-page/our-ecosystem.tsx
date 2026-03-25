@@ -51,6 +51,7 @@ export default function OurEcosystemTabs() {
   const [activeTab, setActiveTab] = useState(tabs[0].id);
 
   const activeData = tabs.find((t) => t.id === activeTab) || tabs[0];
+  const activeIndex = tabs.findIndex((t) => t.id === activeTab);
 
   return (
     <section className="py-24 bg-white dark:bg-background overflow-hidden">
@@ -101,14 +102,14 @@ export default function OurEcosystemTabs() {
           transition={{ duration: 0.4 }}
         >
           {/* Title + Card */}
-          <div className="relative w-full max-w-4xl mx-auto mt-6 mb-16 px-5 overflow-hidden">
+          <div className="relative w-full max-w-4xl mx-auto mt-6 mb-16 px-5 overflow-hidden ">
             {/* Glow — clipped by overflow-hidden, no phantom height */}
             <div
               className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] rounded-full blur-[100px] pointer-events-none"
               style={{ backgroundColor: activeData.glowColor }}
             />
 
-            <div className="relative z-10 flex flex-col items-center text-center">
+            <div className="relative z-10 flex flex-col items-center text-center ">
               <h3
                 className="text-[clamp(2.5rem,6vw,4rem)] font-black text-[#8b9cb0] opacity-80 mb-6 tracking-tight"
                 style={{
@@ -127,7 +128,7 @@ export default function OurEcosystemTabs() {
           </div>
 
           {/* Single EcosystemSection per active tab */}
-          <EcosystemSection />
+          <EcosystemSection activeIndex={activeIndex} />
         </motion.div>
       </AnimatePresence>
     </section>

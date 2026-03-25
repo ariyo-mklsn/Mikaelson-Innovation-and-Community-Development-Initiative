@@ -1,10 +1,9 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Link from "next/link";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { ecosystems } from "./data";
 
 // eco-block
@@ -18,7 +17,7 @@ export function EcosystemBlock({ eco }: { eco: (typeof ecosystems)[0] }) {
     mm.add("(min-width: 768px)", () => {
       const ctx = gsap.context(() => {
         const cards = gsap.utils.toArray<HTMLElement>(
-          sectionRef.current?.querySelectorAll(".eco-card-" + eco.id) ?? []
+          sectionRef.current?.querySelectorAll(".eco-card-" + eco.id) ?? [],
         );
         cards.forEach((card, i) => {
           gsap.set(card, { yPercent: 80, scale: 0.95, opacity: 0, zIndex: i });
@@ -52,7 +51,7 @@ export function EcosystemBlock({ eco }: { eco: (typeof ecosystems)[0] }) {
   }, [eco.id, eco.bullets.length]);
 
   return (
-    <div className="relative">
+    <div className="relative ">
       {/* mobile cards */}
       <div className="md:hidden flex flex-col gap-3 pb-10">
         {eco.bullets.map((bullet, i) => (
@@ -102,7 +101,7 @@ export function EcosystemBlock({ eco }: { eco: (typeof ecosystems)[0] }) {
               </p>
 
               {/* tags */}
-              <div className="flex flex-wrap gap-2 mt-5">
+              {/* <div className="flex flex-wrap gap-2 mt-5">
                 {eco.tags.map((tag) => (
                   <span
                     key={tag}
@@ -111,7 +110,7 @@ export function EcosystemBlock({ eco }: { eco: (typeof ecosystems)[0] }) {
                     {tag}
                   </span>
                 ))}
-              </div>
+              </div> */}
             </div>
 
             {/* bottom accent */}
@@ -125,7 +124,6 @@ export function EcosystemBlock({ eco }: { eco: (typeof ecosystems)[0] }) {
             />
           </motion.div>
         ))}
-
       </div>
 
       {/* desktop cards */}
@@ -179,7 +177,7 @@ export function EcosystemBlock({ eco }: { eco: (typeof ecosystems)[0] }) {
                 >
                   {bullet}
                 </p>
-                <div className="flex flex-wrap gap-3">
+                {/* <div className="flex flex-wrap gap-3">
                   {eco.tags.map((tag) => (
                     <span
                       key={tag}
@@ -188,7 +186,7 @@ export function EcosystemBlock({ eco }: { eco: (typeof ecosystems)[0] }) {
                       {tag}
                     </span>
                   ))}
-                </div>
+                </div> */}
               </div>
 
               {/* bottom accent */}
@@ -208,23 +206,16 @@ export function EcosystemBlock({ eco }: { eco: (typeof ecosystems)[0] }) {
   );
 }
 
-export default function EcosystemSection() {
-  const [active, setActive] = useState(0);
+export default function EcosystemSection({
+  activeIndex,
+}: {
+  activeIndex: number;
+}) {
+ 
 
   return (
     <div className="w-full">
-
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={active}
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -16 }}
-          transition={{ duration: 0.4, ease: "easeOut" }}
-        >
-          <EcosystemBlock eco={ecosystems[active]} />
-        </motion.div>
-      </AnimatePresence>
+      <EcosystemBlock eco={ecosystems[activeIndex]} />
     </div>
   );
 }
