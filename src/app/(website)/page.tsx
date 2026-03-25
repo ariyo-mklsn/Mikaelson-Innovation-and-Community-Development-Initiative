@@ -7,19 +7,64 @@ import ImpactSection from "@/features/website/components/impact-section";
 import MediaStories from "@/features/website/components/media-stories";
 import { useIsMobile } from "@/hooks/use-mobile";
 
-export default function Home() {
-  const isMobile = useIsMobile()
-  const communityUrl = isMobile
-    ? "/assets/images/community-mobile.svg"
-    : "/assets/images/Macbook-pro.jpg";
-  
-  const labsUrl = isMobile
-    ? "/assets/images/lab-mobile.svg"
-    : "/assets/images/Desktop-image.jpg";
-  
-  const sponsorUrl = isMobile
-    ? "/assets/images/partner-mobile.svg"
-    : "/assets/images/iPad Image Presentation.jpg";
+export const metadata: Metadata = {
+  title: "Mikaelson Initiative | Elevating Humanity Through Technology",
+  description:
+    "Structured youth leadership and personal development programs equipping African students with discipline, innovation skills, and accountability systems.",
+  keywords: [
+    "youth leadership Nigeria",
+    "student leadership programs Africa",
+    "personal development for students",
+    "African youth initiative",
+    "leadership training Nigeria",
+    "student growth programs",
+    "Mikaelson Initiative",
+    "youth development Africa",
+    "accountability systems students",
+    "leadership skills students Nigeria",
+  ],
+  authors: [{ name: "Mikaelson Initiative", url: "https://mikaelsoninitiative.org" }],
+  alternates: {
+    canonical: "https://mikaelsoninitiative.org",
+  },
+  openGraph: {
+    title: "Youth Leadership Programs in Nigeria | Mikaelson Initiative",
+    description:
+      "Structured youth leadership and personal development programs equipping African students with discipline, innovation skills, and accountability systems.",
+    url: "https://mikaelsoninitiative.org",
+    siteName: "Mikaelson Initiative",
+    type: "website",
+    locale: "en_NG",
+    images: [
+      {
+        url: "https://mikaelsoninitiative.org/assets/images/og-home.png",
+        width: 1200,
+        height: 630,
+        alt: "Mikaelson Initiative — Youth Leadership Programs in Nigeria",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Youth Leadership Programs in Nigeria | Mikaelson Initiative",
+    description:
+      "Structured youth leadership and personal development programs equipping African students with discipline, innovation skills, and accountability systems.",
+    site: "@mcdti_org",
+    images: ["https://mikaelsoninitiative.org/assets/images/og-home.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+};
+
+export default function LandingPage() {
   return (
     <main className="bg-[#ffffff] dark:bg-background px-5 lg:px-0">
       <HomeHero />

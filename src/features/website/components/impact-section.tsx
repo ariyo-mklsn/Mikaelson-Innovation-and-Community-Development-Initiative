@@ -89,13 +89,13 @@ export default function ImpactSection() {
         <div className="flex justify-between items-center px-5">
           <HeadingClipText className="mb-0" title={"Our Impact so far"} />
           {/* Tabs */}
-          <div className="hidden md:flex gap-2 rounded-lg bg-gray-100 p-1 text-sm md:text-base">
-            {Object.keys(TABS).map((tab) => (
+          <div className="flex gap-0.5 p-1 rounded-xl border border-[#5CE1E6]/20 dark:bg-white/5 bg-[#f0fafa] w-fit">
+            {(Object.keys(TABS) as TabKey[]).map((tab) => (
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab as TabKey)}
                 aria-pressed={activeTab === tab}
-                className={`rounded px-2 md:py-2 transition-colors cursor-pointer ${
+                className={`px-3 md:px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 cursor-pointer ${
                   activeTab === tab
                     ? "bg-white text-gray-900 shadow"
                     : "text-gray-600 hover:text-gray-900"

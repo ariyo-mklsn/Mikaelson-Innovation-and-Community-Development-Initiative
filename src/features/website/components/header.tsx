@@ -28,12 +28,14 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({
   brandName = "Mikaelson Initiative",
   navLinks = [
+   
     { label: "The Team", href: "/team" },
     { label: "Our Product", href: "/product" },
     { label: "About Us", href: "/about-us" },
     { label: "Volunteer", href: "/volunteer" },
   ],
   mobileNavLinks = [
+   
     { label: "The Team", href: "/team" },
     { label: "Community", href: "/community" },
     { label: "Our Product", href: "/product" },
