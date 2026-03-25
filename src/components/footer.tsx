@@ -1,6 +1,5 @@
 import { footerLinks } from "@/constants";
 import { Mail, MapPin } from "lucide-react";
-import { NewsletterForm } from "../components/newsletter-form"
 import Image from "next/image";
 import Link from "next/link";
 import ReportsDropdown from "./annual-report";
@@ -170,7 +169,10 @@ export const Footer = () => {
           </div>
         </div>
       </div>
-
+      <hr />
+      <p className="text-center mt-5">
+        © 2025 Mikaelson Initiative. All rights reserved.
+      </p>
     </footer>
   );
 };
