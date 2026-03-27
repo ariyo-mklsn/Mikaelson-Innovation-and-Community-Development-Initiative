@@ -246,7 +246,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     department: "TECH",
     role: "Graphic Designer",
     country: "NG",
-    img: "/assets/images/Beloved-John.jpg",
+    img: "/assets/images/Beloved-john.jpg",
   },
   {
     name: "Ayegbusi Bright Temitope",
