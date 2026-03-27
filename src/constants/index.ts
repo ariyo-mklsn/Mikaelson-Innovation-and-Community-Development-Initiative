@@ -116,10 +116,10 @@ export const TEAM_MEMBERS: TeamMember[] = [
     img: "/assets/images/afolabi.jpeg",
   },
   {
-    name: "Olatunji-Aresa Ariyo Olamide",
+    name: "Olatunji-Aresa A. Olamide",
     department: "TECH",
     country: "NG",
-    role: "Front-end Engineer",
+    role: "Frontend Engineer",
     img: "/assets/images/AriyoAresa.jpg",
   },
   {
