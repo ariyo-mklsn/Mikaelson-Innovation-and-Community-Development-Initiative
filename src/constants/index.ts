@@ -95,6 +95,13 @@ export const TEAM_MEMBERS: TeamMember[] = [
     img: "/assets/images/Ireti.jpeg",
   },
   {
+    name: "Precious Oparanozie",
+    department: "ADVISORS",
+    role: "Advisor on Legal & Policy",
+    country: "NG",
+    img: "/assets/images/PreciousChidinma.jpg",
+  },
+  {
     name: "Okikiolu Eniola-Glory Fiyinfoluwa",
     department: "OPERATIONS",
     country: "NG",

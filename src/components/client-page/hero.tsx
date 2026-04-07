@@ -69,9 +69,9 @@ const Hero: React.FC = () => {
                 </button>
               </Link>
 
-              <Link href="/about-us">
+              <Link href="/waitlist">
                 <button className="px-7 py-3 text-sm font-semibold text-[#0097a7] border-2 border-[#5CE1E6]/70 rounded-full hover:border-[#5CE1E6] hover:bg-[#5CE1E6]/10 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#5CE1E6]">
-                  Read More
+                  Join Waitlist
                 </button>
               </Link>
             </motion.div>
@@ -106,7 +106,7 @@ const Hero: React.FC = () => {
               <iframe
                 width="100%"
                 height="100%"
-                src="https://www.youtube.com/embed/pkV81B9k_7E?autoplay=1"
+                src="https://www.youtube.com/embed/pkV81B9k_7E?autoplay=1&mute=1"
                 title="WE ARE LIVE! Introducing the All-New Mikaelson Initiative Website!"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
